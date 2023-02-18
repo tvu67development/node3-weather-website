@@ -1,8 +1,6 @@
 
 // trong file index.hbs có dòng script gọi tới file ./js/app.js nên khi chạy app này vào file index thì gọi tới file script này 
 
-console.log('Client side javascript file is loaded !')
-
 // fetch('http://puzzle.mead.io/puzzle').then((response) => {
 //     response.json().then((data) => {
 //         console.log(data)
