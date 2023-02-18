@@ -6,7 +6,7 @@ const geocode = (address, callback) => {
     request({ url: url, json: true}, (error, {body} = {}) => {
         if (error) {
             callback('Unable to connect to position service!', undefined)
-        } else if (body.error) {   // do kết quả trả về trong TH này ko có phần data nên phải xét không có phần data trong kết quả trả về 
+        } else if (body.error || body.data.length === 0) {   // do kết quả trả về trong TH này ko có phần data nên phải xét không có phần data trong kết quả trả về 
             callback('Unable to find position! Try another search.', undefined)
         } else {
             callback(undefined, {
